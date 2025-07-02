@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Совет дня</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="flower.png">
+</head>
+<body class="light-theme">
+    <div class="container">
+        <div class="header">
+            <h1>Совет дня</h1>
+            <div class="theme-switcher">
+                <button id="theme-toggle">🌓</button>
+                <div class="settings-menu">
+                    <button id="settings-btn">⋯</button>
+                    <div class="settings-dropdown">
+                        <button id="clear-history">Очистить всю историю</button>
+                        <div class="history-settings">
+                            <label for="history-lifetime">Срок хранения истории:</label>
+                            <select id="history-lifetime">
+                                <option value="1">1 день</option>
+                                <option value="7">1 неделя</option>
+                                <option value="30" selected>1 месяц</option>
+                                <option value="365">1 год</option>
+                                <option value="0">Навсегда</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="categories">
+            <button class="category-btn active" data-category="all">Все</button>
+            <button class="category-btn" data-category="health">Здоровье и спорт</button>
+            <button class="category-btn" data-category="money">Финансы</button>
+            <button class="category-btn" data-category="life">Жизнь</button>
+            <button class="category-btn" data-category="hacks">Лайфхаки</button>
+        </div>
+
+        <div class="advice-container">
+            <p id="advice">Нажмите кнопку, чтобы получить совет!</p>
+        </div>
+
+        <div class="buttons">
+            <button id="generate-btn"> Получить совет</button>
+            <button id="history-btn"> История последних советов </button>
+        </div>
+
+        <div class="history" id="history-section">
+            <h3>Последние советы <span id="history-count"></span></h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
